@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; }
+body { background: #eee; }
+
+#trigger { position: relative; left: 200px; top: 200px; }
+
+.rm_container {
+	list-style-type: none;
+	display: none;
+}
+.rm_container li { position: absolute; }

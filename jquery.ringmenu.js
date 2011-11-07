@@ -10,7 +10,10 @@
 	// Create the defaults once
 	var pluginName = 'ringmenu',
 		defaults = {
-			
+			mouseenter: function(li_element) {}, //Hover effect on items in menu 
+			mouseout: function(li_element) {}, //Hover effect on items in menu
+			items: [], // Items in a array containing { icon: <img_url>, action: <click_callback> }
+
 		};
 
 	// The actual plugin constructor
@@ -36,6 +39,7 @@
 		// You already have access to the DOM element and
 		// the options via the instance, e.g. this.element
 		// and this.options
+		var self = this;
 
 		var cont = $("<ul>", { "class": "rm_container" });
 		$.each(this.options.items, function(i, item) {
@@ -44,6 +48,8 @@
 			
 			//Bind events to buttons
 			li.bind("click", item.action);
+			li.bind("mouseenter", function() { self.options.mouseenter(li) });
+			li.bind("mouseleave", function() { self.options.mouseout(li) });
 
 			li.appendTo(cont);
 		});

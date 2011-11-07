@@ -7,4 +7,18 @@ body { background: #eee; }
 	list-style-type: none;
 	display: none;
 }
-.rm_container li { position: absolute; }
+.rm_container li {
+	position: absolute;
+	border-radius: 100%;
+	box-shadow: 0 0 10px #aaa;
+	padding: 10px;
+
+	background: #c9c9c9; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #c9c9c9 0%, #9a9a9a 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#c9c9c9), color-stop(100%,#9a9a9a)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #c9c9c9 0%,#9a9a9a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #c9c9c9 0%,#9a9a9a 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #c9c9c9 0%,#9a9a9a 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, #c9c9c9 0%,#9a9a9a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#9a9a9a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

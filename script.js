@@ -31,6 +31,14 @@ $(function() {
 					console.log("tjena");
 				}
 			},
-		]
+		],
+		mouseenter: function(li) {
+			li.children("img").animate({ "opacity": "0.6" }, 100)
+			console.log("mouseenter")
+		},
+		mouseout: function(li) {
+			li.children("img").animate({ "opacity": "1" }, 100)
+			console.log("mouseleave")
+		}
 	});
 });

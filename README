@@ -1,0 +1,19 @@
+Reeally not feature complete jQuery Ringmenu plugin.
+
+Example: 
+$("#button-element").ringmenu({
+	items: [
+		{
+			icon: "img/icon.png",
+			action: function() {
+				//Callback function for when this button is pressed;
+			}
+		},
+		{
+			icon: "img/icon2.png",
+			action: function() {
+				//Callback function for when this button is pressed;
+			}
+		}
+	];
+})
